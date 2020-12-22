@@ -1,0 +1,75 @@
+{
+  "routeHome":{
+
+    "title":{
+      "navTitle": "Hello Twins!!!",
+      "selectLang": "Language",
+      "preDays": "",
+      "postDays": " days to go"
+    },
+
+    "introduction":{
+      "introTitle": "We're not going to go crazy!",
+      "introText": "The arrival of the twins girls, just like the first nights, the first crises and all those first times that will take us by surprise will be a real change, a tsunami... or a twinami! In other words, we try to prepare ourselves without stress and without falling into the madness of wanting to master everything before time because yes, we know it - being a parent is not learned by watching youtube videos but by experimenting directly on the ground. So in order not to turn our house into a toy cave with various useless baby things, we will start carefully and buy as we go, or not, according to our needs. For toys, cardboard boxes and wooden spoons will do for a while. And when the time of the princesses and dragons arrives, we will have taken a nice step. Waiting for everything in its time, what do we need for a baby x 2 ??"
+    },
+
+    "photoEco": {
+      "ecoTitle": "The PhotoBooth!",
+      "weeks":[
+        {
+          "timeStamp": "At 8 weeks"
+        },
+        {
+          "timeStamp": "At 10 weeks"
+        },
+        {
+          "timeStamp": "At 13 weeks"
+        },
+        {
+          "timeStamp": "At 20 weeks"
+        },
+        {
+          "timeStamp": "At 25 weeks"
+        }
+      ]
+    },
+
+    "listDescription":{
+      "listTitle": "Our Birth Wish List:",
+      "listContent": "Why buy when it only lasts a few months or less? Other parents have experienced this and sell a lot of things that are barely used (I would say especially in Germany where the second-hand market is very common). Buying second-hand is a little extra for the planet and for the wallet. This is the philosophy we want to follow. We have listed the products we would like to have used or new. If you want to help us in our approach, we have set up a money-pool (see Paypal link below) for second-hand products. Don't hesitate to contact us to discuss it!",
+      "listFeatures":[
+        {
+          "title": "Keep it small",
+          "content": "As our appartment is not so big, we want too avoid having too much and too big stuff."
+        },
+        {
+          "title": "Enviromental friendly",
+          "content": "As long as we can, we would like to buy second hand material"
+        },
+        {
+          "title": "Same Same",
+          "content": "We want our twins to avoid fighting for the same item, so better twice the same object."
+        }
+      ]
+    },
+
+    "articles":{
+      "title":"List of everything we need",
+      "subtitle":"This is a subtitle",
+      "tags":{
+        "price":"Price: ",
+        "quantity":"Quantity: ",
+        "new": "Preference for new",
+        "used": "Preference second hand",
+        "buyButton":"I'll take it!",
+        "closeButton":"Close"
+      }
+    },
+
+    "paypal":{
+      "poolTitle": "...otherwise, you can also support us.",
+      "poolContent": "If you don't want to buy a specific item, you can also help us to finance it on the following link.",
+      "thanksMsg": "Thank you very much for your support!"
+    }
+  }
+}

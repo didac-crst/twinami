@@ -1,0 +1,75 @@
+{
+  "routeHome":{
+
+    "title":{
+      "navTitle": "Hello Twins!!!",
+      "selectLang": "Sprache",
+      "preDays": "noch ",
+      "postDays": " tage"
+    },
+
+    "introduction":{
+      "introTitle": "Wir werden uns nicht verrückt machen lassen!",
+      "introText": "Die Ankunft der Zwillinge, genau wie die ersten Nächte, die ersten Krisen und all die ersten Male, die uns überraschen werden, wird eine echte Erschütterung sein, ein Tsunami... oder ein Twinami! Wir versuchen also, uns stressfrei vorzubereiten und nicht in den Kaufrausch und den Wahnsinn zu verfallen, alles vor der Zeit meistern zu wollen, denn ja, wir wissen es - Elternsein lernt man nicht durch das Anschauen von Youtube-Videos, sondern durch Erfahrungen direkt vor Ort. Um unser Haus nicht in eine Spielzeughöhle mit verschiedenen nutzlosen Babysachen zu verwandeln, werden wir also vorsichtig anfangen und je nach Bedarf einkaufen oder nicht. Bei Spielzeug reichen Pappkartons und Holzlöffel für eine Weile aus. Und wenn die Zeit der Prinzessinnen und Drachen kommt, werden wir einen guten Schritt getan haben. Bis dahin werden wir alles zu seiner Zeit geschehen lassen und herausfinden: Was brauchen wir für ein Baby mal 2??"
+    },
+
+    "photoEco": {
+      "ecoTitle": " Der Fotoautomat!",
+      "weeks":[
+        {
+          "timeStamp": "Nach 8 Wochen"
+        },
+        {
+          "timeStamp": "Nach 10 Wochen"
+        },
+        {
+          "timeStamp": "Nach 13 Wochen"
+        },
+        {
+          "timeStamp": "Nach 20 Wochen"
+        },
+        {
+          "timeStamp": "Nach 25 Wochen"
+        }
+      ]
+    },
+
+    "listDescription":{
+      "listTitle": "Unsere Geburtsliste:",
+      "listContent": "Warum kaufen, wenn es nur ein paar Monate oder weniger hält? Andere Eltern haben das erlebt und verkaufen viele Dinge, die kaum gebraucht wurden (ich würde sagen, vor allem in Deutschland, wo der Gebrauchtmarkt sehr verbreitet ist). Das Kaufen von gebrauchten Sachen ist ein kleines Extra für den Planeten und für den Geldbeutel. Dies ist die Philosophie, der wir folgen wollen. Wir haben die Produkte aufgelistet, die wir gerne gebraucht oder neu haben möchten. Wenn ihr uns bei unserem Ansatz helfen möchtet, haben wir einen Geldpool (siehe Paypal-Link unten) für gebrauchte Produkte eingerichtet. Zögert nicht, uns zu kontaktieren, um dies zu besprechen!",
+      "listFeatures":[
+        {
+          "title": "Kleinchen",
+          "content": "As our appartment is not so big, we want too avoid having too much and too big stuff."
+        },
+        {
+          "title": "Umweltfreundlich",
+          "content": "As long as we can, we would like to buy second hand material"
+        },
+        {
+          "title": "Mehrfarbig",
+          "content": "We want our twins to avoid fighting for the same item, so better twice the same object."
+        }
+      ]
+    },
+
+    "articles":{
+      "title":"List of everything we need",
+      "subtitle":"This is a subtitle",
+      "tags":{
+        "price":"Preis: ",
+        "quantity":"Menge: ",
+        "new": "Vorzugsweise neu",
+        "used": "Vorzugsweise aus zweiter Hand",
+        "buyButton":"Ich nehme es!",
+        "closeButton":"Schließen"
+      }
+    },
+
+    "paypal":{
+      "poolTitle": "Unserer Geldpool",
+      "poolContent": "Wenn Sie sich am Kauf von gebrauchten Produkten beteiligen möchten, können Sie den folgenden Link verwenden:",
+      "thanksMsg": "Vielen Dank fuer Ihre Unterstuetzung!"
+    }
+  }
+}

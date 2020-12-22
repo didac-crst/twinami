@@ -1,0 +1,224 @@
+/* TAGS SELECTORS */
+/* Text */
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+section {
+  padding: 0 15%;
+}
+
+h1 {
+  font-family: 'Gaegu', cursive !important;
+  font-size: 5rem !important;
+  font-weight: bolder;
+  line-height: 1;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Varela Round', sans-serif;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* CLASS SELECTORS */
+/* WELCOME PAGE */
+#welcome {
+  padding: 4% 15% 2%;
+  background-color: #B8DE6F;
+  text-align: center;
+}
+
+#lang_flags {
+  padding: 3% 10%;
+  background-color: #B8DE6F;
+  text-align: center;
+}
+
+.card-no-border {
+  border: none;
+  background-color: #B8DE6F;
+}
+
+.btn-flag{
+  padding: 2px;
+  margin: 3%;
+  background-color: black;
+  border-color: black;
+}
+
+.flag {
+  text-align: center;
+  width: 240px;
+  height: 160px;
+  padding: 0;
+  display: block;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.flag:hover {
+  opacity: 1;
+}
+
+/* HELLOW TWINS PAGE */
+/* Layout */
+.container-fluid {
+  padding: 0;
+}
+
+/* Nav bar */
+.navbar {
+  padding: 0 0 2.5rem;
+}
+
+.navbar-brand {
+  font-family: 'Gaegu', cursive;
+  font-size: 4rem;
+  color: #cc00cc;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  font-weight: 300;
+}
+
+/* Title Section */
+#title {
+  background:linear-gradient(0deg, #B8DE6F, rgb(184, 222, 111, 0.3)), url("http://localhost:9000/images/forest.jpg");
+  /*#CEE397;*/
+  color: #cc00cc;
+}
+
+.title-image {
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 30%;
+}
+
+/* Introduction */
+#introduction {
+  background-color: white;
+  color: black;
+}
+
+/* Ecos Section */
+#photoEco {
+  background-color: #01C5C4;
+  /*#BAD7F2;*/
+  color: black;
+  text-align: center;
+}
+
+.eco-image {
+  width: 60%;
+  text-align: center;
+}
+
+.carousel-item {
+  padding: 7% 20%;
+}
+
+/* Features */
+#features {
+  padding: 7% 15%;
+  background-color: white;
+  position: relative;
+  text-align: center;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 5%;
+}
+
+.icon {
+  color: #01C5C4;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #B8DE6F;
+}
+
+/* Items Section */
+#items {
+  text-align: center;
+  padding: 50px 15%;
+  background-color: #B8DE6F;
+}
+
+.item-image {
+  width: 70%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* Donation */
+#donation {
+  text-align: center;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+.card {
+  /* width: 18rem; */
+  margin: auto;
+}
+
+#paypal {
+  width: 30%;
+}
+
+.btn-paypal {
+  margin-top: 2%;
+  width: 50%;
+  padding: 2% 0;
+}
+
+/* Footer */
+#footer {
+  background-color: white;
+  padding: 1% 15% 0;
+  text-align: center;
+}
+
+.social-icon {
+  color: #8f8f8f;
+  margin: 20px 10px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width:991px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    width: 50%;
+    padding-top: 5%;
+    transform: rotate(0deg);
+    position: relative;
+    text-align: center;
+    right: 0%;
+  }
+}

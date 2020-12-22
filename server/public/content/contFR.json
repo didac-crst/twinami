@@ -1,0 +1,75 @@
+{
+  "routeHome": {
+
+    "title": {
+      "navTitle": "Hello Twins!!!",
+      "selectLang": "Langue",
+      "preDays": "plus que ",
+      "postDays": " jours"
+    },
+
+    "introduction": {
+      "introTitle": "Il faut pas paniquer!",
+      "introText": "L’arrivée des jumelles, tout comme les premières nuits, les premières crises et toutes ces premières fois qui vont nous prendre de court seront un véritable chamboulement, un tsunami... ou un twinami! Autant dire qu’on essaye de s’y préparer sans stress et sans non plus tomber dans l’excès d' achats et la folie de vouloir tout maîtriser avant l’heure car oui on le sait - être parent ne s’apprend pas en regardant des vidéos youtube mais en expérimentant directement sur le terrain. Alors pour ne pas transformer notre maison en caverne aux jouets avec diverses choses de bébé inutiles, nous allons commencer avec prudence et achèterons au fur et à mesure, ou non, selon nos besoins. Pour les jouets, boîtes en cartons et cuillères en bois feront l’affaire quelque temps. Et quand le temps des princesses et dragons arrivera, c’est que nous aurons franchi une belle étape. En attendant chaque chose en son temps, qu’avons nous besoin pour un bébé x 2 ??"
+    },
+
+    "photoEco": {
+      "ecoTitle": "Le Photomaton!",
+      "weeks": [
+        {
+          "timeStamp": "A 8 semaines"
+        },
+        {
+          "timeStamp": "A 10 semaines"
+        },
+        {
+          "timeStamp": "A 13 semaines"
+        },
+        {
+          "timeStamp": "A 20 semaines"
+        },
+        {
+          "timeStamp": "A 25 semaines"
+        }
+      ]
+    },
+
+    "listDescription": {
+      "listTitle": "Notre liste de naissance:",
+      "listContent": "Pourquoi investir quand cela ne dure que quelques mois ou moins? D’autres parents en ont fait l’expérience et vendent pleins de choses à peine usées  (je dirais surtout en Allemagne où le marché de l’occasion est très courant). Acheter d’occasion est un petit plus pour la planète et pour le porte monnaie. Voilà notre philosophie. Nous avons répertorié les produits que l’on aimerait avoir d’occasion ou neuf. Si vous voulez nous aider dans notre démarche, nous avons mis en place une cagnotte (lien Paypal ci-dessous) pour les produits d’occasion. N'hésitez pas à nous contacter pour en discuter!",
+      "listFeatures": [
+        {
+          "title": "Privilégier petits",
+          "content": "Nous essayons d'éviter les choses trop encombrantes "
+        },
+        {
+          "title": "Respectueux de l'environnement",
+          "content": "Nous essayerons d'acheter d'occasion et sans plastique"
+        },
+        {
+          "title": "Multicouleur",
+          "content": "Bleu, vert et couleur neutre à privilégier sur le rose et paillette."
+        }
+      ]
+    },
+
+    "articles": {
+      "title": "Liste des produits souhaités",
+      "subtitle": "Sous-titre",
+      "tags": {
+        "price": "Prix: ",
+        "quantity": "Quantité: ",
+        "new": "De préférence neuf",
+        "used": "De préférence d'occasion",
+        "buyButton": "Je le prends!",
+        "closeButton":"Fermer"
+      }
+    },
+
+    "paypal": {
+      "poolTitle": "Cagnotte de naissance",
+      "poolContent": "Si vous voulez participer à l'achat des produits d'occasion, vous pouvez utiliser le lien suivant:",
+      "thanksMsg": "Merci de tout coeur pour votre contribution!"
+    }
+  }
+}

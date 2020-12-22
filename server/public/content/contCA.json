@@ -1,0 +1,75 @@
+{
+  "routeHome":{
+
+    "title":{
+      "navTitle": "Hello Twins!!!",
+      "selectLang": "Llengua",
+      "preDays": "falten ",
+      "postDays": " dies"
+    },
+
+    "introduction":{
+      "introTitle": "Tampoc fa falta tornar-nos bojos!",
+      "introText": "L’arribada de les bessones, així com les primeres nits, les primeres crisis i totes les primeres vegades que ens agafaran desprevinguts serà una gran transició, un tsunami… o més ben dit un twinami!! Això significa que poc a poc ens anem preparant sense estressar-nos per no caure ni en la temptació de comprar en excés ni en la bogeria de volguer-ho controlar tot abans de que arribi el moment. Ja sabem que ser pare no s’aprén mirant videos de youtube sinó més aviat experimentant-ho sobre el terreny. És per això que per evitar transformar casa nostra en un cova de joguines i d’artefactes inútils per infants, volem començar de manera prudent i anar comprant poc a poc i segons les nostres necessitats. En quan a les joguines, les caixes de cartró i les culleres de fusta seran suficients al principi. Quan arribi l’hora de jugar a princeses i dracs voldrà dir que haurem superat una bona etapa. Però de moment, cada cosa al seu temps; que podem necessitar per un infant x 2??"
+    },
+
+    "photoEco": {
+      "ecoTitle": "El Fotomató!",
+      "weeks":[
+        {
+          "timeStamp": "A 8 setmanes"
+        },
+        {
+          "timeStamp": "A 10 setmanes"
+        },
+        {
+          "timeStamp": "A 13 setmanes"
+        },
+        {
+          "timeStamp": "A 20 setmanes"
+        },
+        {
+          "timeStamp": "A 25 setmanes"
+        }
+      ]
+    },
+
+    "listDescription":{
+      "listTitle": "La nostra Llista de Naixement:",
+      "listContent": "Per què comprar si només durarà uns pocs mesos? Altres pares ho han experimentat i acaben venent moltes coses que han estat amb prou feines utilitzades (especialment a Alemanya a on el mercat de segona mà és molt habitual). Comprar de segona mà és no només avantatjós per l’estalvi sinó també un petit gra de sorra pel nostra planeta i és per això que és la filosofia que volem intentar seguir. Hem llistat els productes que volem comprar nous i els que volem de segona mà. Si ens voleu ajudar amb la nostra manera de fer, hem posat en marxa una guardiola virtual (enllaç de Paypal a sota) pels productes de segona mà. Si teniu cap dubte, poseu-vos en contacte amb nosaltres.",
+      "listFeatures":[
+        {
+          "title": "Preferiblament petit",
+          "content": "Vist que el nostre apartament no és massa gran, preferim tenir poques coses i que no siguin massa grans."
+        },
+        {
+          "title": "Respectuós amb el medi ambient",
+          "content": "A mesura que es pugui, volem comprar el material de segona mà."
+        },
+        {
+          "title": "Multicolor",
+          "content": "Blau, verd i colors neutres preferiblement abans del rosa amb purpurina."
+        }
+      ]
+    },
+
+    "articles":{
+      "title":"List of everything we need",
+      "subtitle":"This is a subtitle",
+      "tags":{
+        "price":"Preu: ",
+        "quantity":"Quantitat: ",
+        "new": "De preferència nou",
+        "used": "De segona mà",
+        "buyButton":"Me'l quedo!",
+        "closeButton":"Tancar"
+      }
+    },
+
+    "paypal":{
+      "poolTitle": "Guardiola virtual",
+      "poolContent": "Si voleu contribuir però no voleu agafar cap article nou, podeu contribuir en el enllaç següent:",
+      "thanksMsg": "Moltes gracies per la vostra contribucio!"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "routeHome":{
+
+    "title":{
+      "navTitle": "Hello Twins!!!",
+      "selectLang": "Idioma",
+      "preDays": "quedan ",
+      "postDays": " dias"
+    },
+
+    "introduction":{
+      "introTitle": "No vamos a volvernos locos!",
+      "introText": "Con la llegada de las mellizas (o gemelas), tanto como las primeras noches, las primeras crisis y todas las otras primeras veces que nos van a pillar desprevenidos va a ser una agitación, un tsunami… o mejor dicho un twinami!! Esto significa que nos vamos preparando paso a paso sin estresarnos para evitar caer en la tentación de comprar en exceso y la locura de querer controlarlo todo antes de que llegue el momento. Sabemos que ser padre es algo que no se aprende mirando videos en youtube sino más bien experimentándose sobre el terreno. Es por eso que no queremos convertir nuestra casa en una cueva de juguetes y artefactos inútiles para bebé, queremos empezar de forma prudente y comprar poco a poco y según nuestras necesidades. En cuanto a los juguetes, las cajas de cartón y las cucharas de palo serán suficientes al principio. Cuando llegue la hora de jugar a princesas y dragones querrá decir que hemos superado una etapa bonita. Pero de momento cada cosa en su momento; que vamos a necesitar para un bebé x 2??"
+    },
+
+    "photoEco": {
+      "ecoTitle": "El Fotomatón!",
+      "weeks":[
+        {
+          "timeStamp": "A 8 semanas"
+        },
+        {
+          "timeStamp": "A 10 semanas"
+        },
+        {
+          "timeStamp": "A 13 semanas"
+        },
+        {
+          "timeStamp": "A 20 semanas"
+        },
+        {
+          "timeStamp": "A 25 semanas"
+        }
+      ]
+    },
+
+    "listDescription":{
+      "listTitle": "Nuestra Lista de Nacimiento:",
+      "listContent": "¿Para qué comprar si solo va a durar unos pocos meses? Otros padres lo han experimentado y terminan por vender muchas cosas que apenas han utilizado (especialmente aquí en Alemania donde el mercado de segunda mano es muy habitual). Comprar de segunda mano no es solo ventajoso para los ahorros sino también un pequeño granito de arena para nuestro planeta y es por eso que es la filosofía que queremos intentar seguir. Hemos listado los productos que queremos comprar nuevos y los que queremos de segunda mano. Si queréis ayudarnos con nuestro planteamiento, hemos puesto en marcha una colecta en línea (enlace de Paypal más abajo) para los productos de segunda mano. Si tenéis alguna duda, poneros en contacto con nosotros.",
+      "listFeatures":[
+        {
+          "title": "Mejor pequeño",
+          "content": "Como nuestro aparatamento no es demasiado grande, preferimos no tener demasiadas cosas y que no sean muy grandes."
+        },
+        {
+          "title": "Respetuoso con el medio ambiente",
+          "content": "En la medida que se pueda, preferimos comprar de segunda mano."
+        },
+        {
+          "title": "Multicolor",
+          "content": "Azul, verde y colores neutros preferiblemente antes del rosa con purpurina."
+        }
+      ]
+    },
+
+    "articles":{
+      "title":"List of everything we need",
+      "subtitle":"This is a subtitle",
+      "tags":{
+        "price":"Precio: ",
+        "quantity":"Cantidad: ",
+        "new": "De preferéncia nuevo",
+        "used": "De segunda mano",
+        "buyButton":"Me lo quedo!",
+        "closeButton":"Cerrar"
+      }
+    },
+
+    "paypal":{
+      "poolTitle": "Colecta en línea",
+      "poolContent": "Si queréis participar pero no queréis coger ningún articulo nuevo, podéis contribuir en el siguiente enlace:",
+      "thanksMsg": "Muchas gracias por vuestra contribucion!"
+    }
+  }
+}

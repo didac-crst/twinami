@@ -1,0 +1,40 @@
+{
+  "routeHome":{
+    "photoEco": {
+      "weeks":[
+        {
+          "fileName": "image/eco1.png"
+        },
+        {
+          "fileName": "image/eco2.png"
+        },
+        {
+          "fileName": "image/eco3.jpg"
+        },
+        {
+          "fileName": "image/eco4.jpg"
+        },
+        {
+          "fileName": "image/eco5.jpg"
+        }
+      ]
+    },
+
+    "listDescription":{
+      "listFeatures":[
+        {
+          "iconType": "faCompressArrowsAlt"
+        },
+        {
+          "iconType": "faLeaf"
+        },
+        {
+          "iconType": "faYinYang"
+        }
+      ]
+    },
+    "paypal":{
+      "button": "image/paypal.png"
+    }
+  }
+}
