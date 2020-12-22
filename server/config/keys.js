@@ -1,10 +1,10 @@
 require('dotenv').config();
 
 const WEBSITE_URL = {
-  // CLIENT_HOME_PAGE_URL: process.env.CLIENT_HOME_PAGE_URL,
-  // SERVER_HOME_PAGE_URL: process.env.SERVER_HOME_PAGE_URL
-  CLIENT_HOME_PAGE_URL: '/',
-  SERVER_HOME_PAGE_URL: ''
+  CLIENT_HOME_PAGE_URL: process.env.CLIENT_HOME_PAGE_URL,
+  SERVER_HOME_PAGE_URL: process.env.SERVER_HOME_PAGE_URL
+  // CLIENT_HOME_PAGE_URL: '/',
+  // SERVER_HOME_PAGE_URL: ''
 };
 
 const GOOGLE_TOKENS = {
