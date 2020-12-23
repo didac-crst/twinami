@@ -1,6 +1,6 @@
 const passport = require("passport");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const FacebookStrategy = require('passport-facebook').Strategy;
+//const FacebookStrategy = require('passport-facebook').Strategy;
 const keys = require("./keys");
 const User = require("../models/user-model");
 
@@ -23,28 +23,16 @@ passport.use(
     clientID: keys.GOOGLE_CLIENT_ID,
     clientSecret: keys.GOOGLE_CLIENT_SECRET,
     callbackURL: keys.SERVER_HOME_PAGE_URL+"/auth/google/logged",
-    // userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
+    userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({
       googleId: profile.id,
       name: profile.displayName,
-      email: profile.emails[0].value
+      email: profile.emails[0].value,
+      username: "google-"+profile.id
     }, function(err, user) {
       return cb(err, user);
     });
-  }
-
-  // async (accessToken, refreshToken, profile, done) => {
-  //     const existingUser = await User.findOne({ googleId: profile.id });
-  //
-  //     if (existingUser) {
-  //         return done(null, existingUser);
-  //     }
-  //
-  //     const user = await User({ googleID: profile.id }).save()
-  //     done(null, user);
-  // }
-
-  )
+  })
 );

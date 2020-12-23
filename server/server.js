@@ -1,7 +1,7 @@
 // require("dotenv/config");
 const path = require('path');
 const express = require('express');
-const session = require("express-session");
+//const session = require("express-session");
 const app = express();
 const passport = require("passport");
 const cookieSession = require("cookie-session");
@@ -12,11 +12,11 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const _ = require('lodash');
 
-const passportSetup = require("./config/passport-setup");
+const passportSetup = require("./config/passport-setup"); //Need it
 const keys = require("./config/keys");
 // const apiRoutes = require('./routes/api-routes');
 const authRoutes = require('./routes/auth-routes');
-const User = require("./models/user-model");
+//const User = require("./models/user-model");
 const Article = require("./models/article-model");
 
 // const passportLocalMongoose = require("passport-local-mongoose");
@@ -40,12 +40,6 @@ mongoose.connect(keys.MONGODB_URL, {
   console.log('Connected to MongoDB')
 });
 
-
-// app.use(session({
-//   secret: keys.SESSION_SECRET,
-//   resave: false,
-//   saveUninitialized: false
-// }));
 
 app.use(cookieSession({
   name: "session",
@@ -73,157 +67,38 @@ const corsConfig = {
 app.use(cors(corsConfig));
 
 
-// Add Access Control Allow Origin headers
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", keys.CLIENT_HOME_PAGE_URL);
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-// });
-
 // set up routes
 // app.use("/api", apiRoutes);
 app.use("/auth", authRoutes);
 
-// const authCheck = (req, res, next) => {
-//   if (!req.user) {
-//     res.status(401).json({
-//       authenticated: false,
-//       message: "user has not been authenticated"
-//     });
-//   } else {
-//     next();
-//   }
-// };
-//
-// // if it's already login, send the profile response,
-// // otherwise, send a 401 response that the user is not authenticated
-// // authCheck before navigating to home page
-// app.get("/auth", authCheck, (req, res) => {
-//   // res.header("Access-Control-Allow-Origin", keys.CLIENT_HOME_PAGE_URL);
-//   res.status(200).json({
-//     authenticated: true,
-//     message: "user successfully authenticated",
-//     user: req.user,
-//     cookies: req.cookies
-//   });
-// });
+const authCheck = (req, res, next) => {
+  if (!req.user) {
+    res.status(401).json({
+      authenticated: false,
+      message: "user has not been authenticated"
+    });
+  } else {
+    next();
+  }
+};
 
-
-
-
-
-
-// Define User Table
-// const userSchema = new mongoose.Schema({
-//   email: String,
-//   googleId: String,
-//   facebookId: String,
-//   name: String,
-// });
-
-// add passport mongoose plugin to our object
-// userSchema.plugin(passportLocalMongoose);
-// userSchema.plugin(findOrCreate);
-
-// const User = new mongoose.model("User", userSchema);
-
-// use static authenticate method of model in LocalStrategy
-// passport.use(User.createStrategy());
-
-// // use static serialize and deserialize of model for passport session support
-// passport.serializeUser(function(user, done) {
-//   done(null, user.id);
-// });
-//
-// passport.deserializeUser(function(id, done) {
-//   User.findById(id, function(err, user) {
-//     done(err, user);
-//   });
-// });
-
-// passport.use(new GoogleStrategy({
-//     clientID: process.env.GOOGLE_CLIENT_ID,
-//     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-//     callbackURL: "http://localhost:9000/auth/google/logged",
-//     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
-//   },
-//   function(accessToken, refreshToken, profile, cb) {
-//     User.findOrCreate({
-//       googleId: profile.id,
-//       name: profile.displayName,
-//       email: profile.emails[0].value
-//     }, function(err, user) {
-//       return cb(err, user);
-//     });
-//   }
-// ));
-
-
-
-// Import content:
-// const pathContent = __dirname + '/public/content/';
-// const staticContent = {
-//   "Files": require(pathContent +'/contFiles.json'),
-//   "metaEN": require(pathContent +'/contEN.json'),
-//   "metaFR": require(pathContent +'/contFR.json'),
-//   "metaES": require(pathContent +'/contES.json'),
-//   "metaCA": require(pathContent +'/contCA.json'),
-//   "metaDE": require(pathContent +'/contDE.json')
-// }
-
-const staticContent = require("./public/content/json-content");
-
-// Define Schema
-// const articleSchema = new Schema({
-//   metaEn: {
-//     name: String,
-//     description: String
-//   },
-//   metaFr: {
-//     name: String,
-//     description: String
-//   },
-//   metaEs: {
-//     name: String,
-//     description: String
-//   },
-//   metaCa: {
-//     name: String,
-//     description: String
-//   },
-//   metaDe: {
-//     name: String,
-//     description: String
-//   },
-//   price: String,
-//   quantity: String,
-//   buyNew: Boolean,
-//   link: String,
-//   image: {
-//     data: Buffer,
-//     contentType: String
-//   }
-// });
-
-// const Article = new mongoose.model('Article', articleSchema);
-
-
-// function filterArticlesLang(articles,lang){
-//   articlesMeta =[];
-//   articles.forEach(article => {
-//     const {[lang]: meta} = article;
-//     const articleMeta = {meta};
-//     articleMeta._id = article._id;
-//     articlesMeta.push(articleMeta);
-//   });
-//   return articlesMeta;
-// }
+// if it's already login, send the profile response,
+// otherwise, send a 401 response that the user is not authenticated
+// authCheck before navigating to home page
+app.get("/auth", authCheck, (req, res) => {
+  // res.header("Access-Control-Allow-Origin", keys.CLIENT_HOME_PAGE_URL);
+  res.status(200).json({
+    authenticated: true,
+    message: "user successfully authenticated",
+    user: req.user,
+    cookies: req.cookies
+  });
+});
 
 
 // GET --------------------------------------------------------
+
+const staticContent = require("./public/content/json-content");
 
 
 app.get('/image/:imageName', (req,res) =>{
@@ -278,20 +153,6 @@ app.get('/bookArticle/:articleID', (req,res) => {
     }
   });
 });
-
-
-// POST --------------------------------------------------------
-
-
-// AUTHENTICATION ----------------------------------------------
-
-// AUTH - GET ----------------------------------------
-
-
-
-// AUTH - POST ---------------------------------------
-
-
 
 
 // PORT LISTENING ----------------------------------------
