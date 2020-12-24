@@ -1,12 +1,24 @@
 {
-  "routeHome":{
+  "navbar":{
+    "menu":"Menü",
+    "login": "Einloggen",
+    "logout": "Ausloggen",
+    "general": "Allgemein",
+    "items": "Meine Artikel",
+    "language": "Sprache",
+    "loggedOutTitle": "Ausgeloggt",
+    "loggedOutText": "Logg dich ein, um Artikel zu buchen.",
+    "loggedInTitle": "Eingeloggt",
+    "loggedInTextPre": "Eingeloggt als ",
+    "loggedInTextPost": ". Nun kannst du jeden Artikel unter deinem Konto buchen."
+  },
 
-    "title":{
-      "navTitle": "Hello Twins!!!",
-      "selectLang": "Sprache",
-      "preDays": "noch ",
-      "postDays": " tage"
-    },
+  "title":{
+    "preDays": "noch ",
+    "postDays": " tage"
+  },
+
+  "overview":{
 
     "introduction":{
       "introTitle": "Wir werden uns nicht verrückt machen lassen!",
@@ -70,6 +82,19 @@
       "poolTitle": "Unserer Geldpool",
       "poolContent": "Wenn Sie sich am Kauf von gebrauchten Produkten beteiligen möchten, können Sie den folgenden Link verwenden:",
       "thanksMsg": "Vielen Dank fuer Ihre Unterstuetzung!"
+    }
+  },
+
+  "myItems":{
+    "title": "Diese sind die Artikel, die du gebucht hast:",
+    "empty":"Es gibt keinen Artikel gebucht.",
+    "tags":{
+      "price":"Preis: ",
+      "quantity":"Menge: ",
+      "new": "Vorzugsweise neu",
+      "used": "Vorzugsweise aus zweiter Hand",
+      "deleteButton":"Das will ich nicht mehr",
+      "closeButton":"Schließen"
     }
   }
 }

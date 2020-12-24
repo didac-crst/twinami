@@ -1,7 +1,35 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Countdown from "./Countdown";
 
 function Title(props) {
+
+    const page = "title";
+
+    //FETCHING CONTENT DATA
+    const linkContent = props.linkAPI+"content/"+page+":"+props.lang;
+    const [jsonCont, setJsonCont] = useState({});
+    const [loadCont, setLoadCont] = useState(false);
+
+    useEffect(() => {
+        if (!loadCont){
+        fetch(linkContent)
+            .then(res => res.json())
+            .then(json => {
+            setJsonCont(json);
+            setLoadCont(true);
+            }
+        );
+        }
+    });
+
+    // RELOAD INFO
+    useEffect (() => {
+        if (props.reloadTitle){
+            setLoadCont(false);
+            props.setReloadTitle(false);
+        }
+    });
+
 
     const [counter, setCounter] = useState(true);
 
@@ -21,7 +49,7 @@ function Title(props) {
         <section id="title">
             {counter  ? (
                 <div className="d-flex justify-content-center mt-5">
-                    {props.loadCont && ( <Countdown pre = {props.jsonCont.preDays} post = {props.jsonCont.postDays}/> )}
+                    {loadCont && ( <Countdown pre = {jsonCont.preDays} post = {jsonCont.postDays}/> )}
                 </div>
             ) : (
                 <div className="clockSpaceSubst"/>

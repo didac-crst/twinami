@@ -1,12 +1,24 @@
 {
-  "routeHome": {
+  "navbar":{
+    "menu":"Menu",
+    "login": "Se connecter",
+    "logout": "Se deconnecter",
+    "general": "Général",
+    "items": "Mes articles",
+    "language": "Langue",
+    "loggedOutTitle": "Deconnecté",
+    "loggedOutText": "Connecte-toi pour commencer à réserver des articles sous ton compte.",
+    "loggedInTitle": "Connecté",
+    "loggedInTextPre": "Connecté en tant que ",
+    "loggedInTextPost": ". Tu es prêt pour reserver des articles sous ton compte."
+  },
 
-    "title": {
-      "navTitle": "Hello Twins!!!",
-      "selectLang": "Langue",
-      "preDays": "plus que ",
-      "postDays": " jours"
-    },
+  "title":{
+    "preDays": "plus que ",
+    "postDays": " jours"
+  },
+
+  "overview":{
 
     "introduction": {
       "introTitle": "Il faut pas paniquer!",
@@ -70,6 +82,19 @@
       "poolTitle": "Cagnotte de naissance",
       "poolContent": "Si vous voulez participer à l'achat des produits d'occasion, vous pouvez utiliser le lien suivant:",
       "thanksMsg": "Merci de tout coeur pour votre contribution!"
+    }
+  },
+
+  "myItems":{
+    "title": "Ceux-ci sont les articles que tu as reservé:",
+    "empty":"Il n'y a pas d'articles reservés.",
+    "tags": {
+      "price": "Prix: ",
+      "quantity": "Quantité: ",
+      "new": "De préférence neuf",
+      "used": "De préférence d'occasion",
+      "deleteButton":"Je le veux plus",
+      "closeButton":"Fermer"
     }
   }
 }

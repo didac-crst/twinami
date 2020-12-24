@@ -9,16 +9,16 @@ function Connected (props){
         <Popover id="popover-basic">
             <Popover.Title as="h3">
                 {props.authenticated ? (
-                    <strong style={{color:'blue'}}>Logged In</strong>
+                    <strong style={{color:'blue'}}>{props.jsonCont.loggedInTitle}</strong>
                 ) : (
-                    <strong style={{color:'red'}}>Logged Out</strong>
+                    <strong style={{color:'red'}}>{props.jsonCont.loggedOutTitle}</strong>
                 )}
             </Popover.Title>
             <Popover.Content>
                 {props.authenticated ? (
-                    <>Connected as <strong>{props.authUser.name}</strong>. If this is not your account, please log out.</>
+                    <>{props.jsonCont.loggedInTextPre}<strong>{props.authUser.name}</strong>{props.jsonCont.loggedInTextPost}</>
                 ) : (
-                    <>Please log in to start booking any item into your own account.</>
+                    <>{props.jsonCont.loggedOutText}</>
                 )}
             </Popover.Content>
         </Popover>

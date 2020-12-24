@@ -21,6 +21,9 @@ function LanguageToggle(props){
          const metaValue = "meta"+value;
          props.setLang(metaValue);
          props.setReloadData(true);
+         props.setReloadTitle(true);
+         props.setReloadNav(true);
+         props.setReloadItems(true);
       }
    };
    return (
@@ -30,7 +33,7 @@ function LanguageToggle(props){
             // variant="secondary"
             id="dropdown-basic"
          >
-            Language
+            {props.languageMenu}
             {/* {props.select} */}
          </Dropdown.Toggle>
 

@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import { Card, Button, Container, Row, Col, ListGroup, ListGroupItem, Modal, Form } from 'react-bootstrap';
-import ArticleBookBtn from './ArticleBookBtn';
+import { Card, Button, Container, Row, Col, ListGroup, ListGroupItem, Modal } from 'react-bootstrap';
+import MyItemDeleteBtn from './MyItemDeleteBtn';
 
-function ArticleCard(props) {
+function MyItemCard(props) {
     const lang = props.lang;
     const text = props.jsonArticle[lang];
 
@@ -19,12 +19,8 @@ function ArticleCard(props) {
 
     // Handle Modals
     const [show, setShow] = useState(false);
-    const [comment, setComment] = useState(false);
     
-    const handleClose = () => {
-        setShow(false);
-        setComment(false);
-    }
+    const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
 
@@ -61,17 +57,6 @@ function ArticleCard(props) {
                                     <ListGroupItem className="listArticle textLeft">{props.tags.price}{props.jsonArticle.price}€</ListGroupItem>
                                     <ListGroupItem className="listArticle textLeft">{props.tags.quantity}{props.jsonArticle.quantity}</ListGroupItem>
                                     <ListGroupItem className="listArticle textLeft">{props.jsonArticle.buyNew ? props.tags.new : props.tags.used}</ListGroupItem>
-                                    {comment && (
-                                        <Form>
-                                            <Form.Group controlId="formBasicEmail">
-                                                <Form.Label>Comment</Form.Label>
-                                                <Form.Control type="comment" placeholder="Enter comment" />
-                                                <Form.Text className="text-muted">
-                                                Tell us anything you want to share with us about the item you've chosen.
-                                                </Form.Text>
-                                            </Form.Group>
-                                        </Form>
-                                    )}
                                 </ListGroup>
                             </Col>
                         </Row>
@@ -81,26 +66,17 @@ function ArticleCard(props) {
                 <Button variant="secondary" onClick={handleClose}>
                     {props.tags.closeButton}
                 </Button>
-                {props.authenticated ? (
-                    <ArticleBookBtn
-                        linkAPI = {props.linkAPI}
-                        articleId = {props.jsonArticle._id}
-                        authUser={props.authUser}
-                        buyButton = {props.tags.buyButton}
-                        comment = {comment}
-                        setComment = {setComment}
-                        handleClose = {handleClose}
-                        setLoadDB = {props.setLoadDB}
-                    />
-                ) : (
-                    <Button variant="primary" onClick={handleClose}>
-                        Login
-                    </Button>
-                )}
+                <MyItemDeleteBtn
+                    linkAPI = {props.linkAPI}
+                    articleId = {props.jsonArticle._id}
+                    deleteButton = {props.tags.deleteButton}
+                    handleClose = {handleClose}
+                    setLoadDB = {props.setLoadDB}
+                />
             </Modal.Footer>
         </Modal>
       </div>
       );
   }
 
-  export default ArticleCard;
+  export default MyItemCard;

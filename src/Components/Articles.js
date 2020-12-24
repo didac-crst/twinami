@@ -18,6 +18,10 @@ function Articles(props) {
                         jsonArticle = {props.loadDB && article}
                         loadDB = {props.loadDB}
                         tags = {props.jsonCont.tags}
+                        authenticated={props.authenticated}
+                        authUser={props.authUser}
+                        linkAPI={props.linkAPI}
+                        setLoadDB = {props.setLoadDB}
                     />
                 ))}
             </CardColumns>

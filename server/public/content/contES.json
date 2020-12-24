@@ -1,12 +1,24 @@
 {
-  "routeHome":{
+  "navbar":{
+    "menu":"Menu",
+    "login": "Conectarse",
+    "logout": "Desconectarse",
+    "general": "General",
+    "items": "Mis artículos",
+    "language": "Idioma",
+    "loggedOutTitle": "Desconectado",
+    "loggedOutText": "Por favor conectate para poder reservar cualquier articulo en tu cuenta.",
+    "loggedInTitle": "Conectado",
+    "loggedInTextPre": "Conectado como ",
+    "loggedInTextPost": ". Ahora ya puedes reservar cualquier articulo en tu cuenta."
+  },
 
-    "title":{
-      "navTitle": "Hello Twins!!!",
-      "selectLang": "Idioma",
-      "preDays": "quedan ",
-      "postDays": " dias"
-    },
+  "title":{
+    "preDays": "quedan ",
+    "postDays": " dias"
+  },
+
+  "overview":{
 
     "introduction":{
       "introTitle": "No vamos a volvernos locos!",
@@ -70,6 +82,19 @@
       "poolTitle": "Colecta en línea",
       "poolContent": "Si queréis participar pero no queréis coger ningún articulo nuevo, podéis contribuir en el siguiente enlace:",
       "thanksMsg": "Muchas gracias por vuestra contribucion!"
+    }
+  },
+
+  "myItems":{
+    "title": "Estos son los artículos que has reservado:",
+    "empty":"No hay ningún articulo reservado.",
+    "tags":{
+      "price":"Precio: ",
+      "quantity":"Cantidad: ",
+      "new": "De preferéncia nuevo",
+      "used": "De segunda mano",
+      "deleteButton":"Ya no lo quiero",
+      "closeButton":"Cerrar"
     }
   }
 }

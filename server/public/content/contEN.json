@@ -1,12 +1,24 @@
 {
-  "routeHome":{
+  "navbar":{
+    "menu":"Menu",
+    "login": "Login",
+    "logout": "Logout",
+    "general": "General",
+    "items": "My items",
+    "language": "Language",
+    "loggedOutTitle": "Logged Off",
+    "loggedOutText": "Please log in to start booking any item into your account.",
+    "loggedInTitle": "Logged In",
+    "loggedInTextPre": "Connected as ",
+    "loggedInTextPost": ". You're ready to book any item into your account."
+  },
 
-    "title":{
-      "navTitle": "Hello Twins!!!",
-      "selectLang": "Language",
-      "preDays": "",
-      "postDays": " days to go"
-    },
+  "title":{
+    "preDays": "",
+    "postDays": " days to go"
+  },
+
+  "overview":{
 
     "introduction":{
       "introTitle": "We're not going to go crazy!",
@@ -70,6 +82,19 @@
       "poolTitle": "...otherwise, you can also support us.",
       "poolContent": "If you don't want to buy a specific item, you can also help us to finance it on the following link.",
       "thanksMsg": "Thank you very much for your support!"
+    }
+  },
+
+  "myItems":{
+    "title": "These are the items you have booked:",
+    "empty":"No items booked.",
+    "tags":{
+      "price":"Price: ",
+      "quantity":"Quantity: ",
+      "new": "Preference for new",
+      "used": "Preference second hand",
+      "deleteButton":"I don't want it anymore",
+      "closeButton":"Close"
     }
   }
 }

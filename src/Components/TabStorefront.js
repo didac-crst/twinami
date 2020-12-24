@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import Loading from './Loading';
-import Title from './Title';
 import Introduction from './Introduction';
 import PhotoEco from './PhotoEco';
 import Features from './Features';
@@ -10,7 +9,7 @@ import Donation from './Donation';
 
 function AppBody(props) {
 
-  const page = "routeHome";
+  const page = "overview";
 
   //FETCHING CONTENT DATA
   const linkContent = props.linkAPI+"content/"+page+":"+props.lang;
@@ -30,7 +29,7 @@ function AppBody(props) {
   });
 
   //FETCHING DB DATA
-  const linkDB = props.linkAPI+"db/"+page;
+  const linkDB = props.linkAPI+"db";
   const [jsonDB, setJsonDB] = useState({});
   const [loadDB, setLoadDB] = useState(false);
 
@@ -50,7 +49,7 @@ function AppBody(props) {
   useEffect (() => {
     if (props.reloadData){
         setLoadCont(false);
-        setLoadDB(false);
+        //setLoadDB(false);
         props.setReloadData(false);
     }
   });
@@ -62,12 +61,6 @@ function AppBody(props) {
   } else {
     return (
       <div id="TabStorefront">     
-        <Title
-          jsonCont = {loadCont && jsonCont.title}
-          loadCont = {loadCont}
-          setLoadCont = {setLoadCont}
-          setLoadDB = {setLoadDB}
-        />
         <Introduction 
           jsonCont = {loadCont && jsonCont.introduction}
           loadCont = {loadCont}
@@ -88,6 +81,10 @@ function AppBody(props) {
           loadCont = {loadCont}
           jsonDB = {loadDB && jsonDB.articlesDB}
           loadDB = {loadDB}
+          setLoadDB = {setLoadDB}
+          authenticated={props.authenticated}
+          authUser={props.authUser}
+          linkAPI={props.linkAPI}
         />
         <Donation  
           linkAPI = {props.linkAPI}

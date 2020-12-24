@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react";
 import NavbarSelf from './NavbarSelf';
 import TitleBackground from './TitleBackgroung';
+import Title from './Title';
 import TabStorefront from './TabStorefront';
+import TabMyItems from './TabMyItems';
 import Footer from './Footer';
 import Environment from '../Environment';
 
@@ -11,6 +13,10 @@ function AppBody(props) {
   const linkAPI = Environment.SERVER_HOME_PAGE_URL+"/";
 
   const [reloadData, setReloadData] = useState(false);
+  const [reloadItems, setReloadItems] = useState(false);
+  const [reloadTitle, setReloadTitle] = useState(false);
+  const [reloadNav, setReloadNav] = useState(false);
+  const [tabDisplayed, setTabDisplayed] = useState("General");
 
   // AUTHENTICATION
   const [authStateUser, setAuthStateUser] = useState({});
@@ -52,20 +58,47 @@ function AppBody(props) {
           linkAPI = {linkAPI}
           lang = {props.lang}
           setLang = {props.setLang}
+          reloadNav = {reloadNav}
+          setReloadNav = {setReloadNav}
           setReloadData = {setReloadData}
+          setReloadItems = {setReloadItems}
+          setReloadTitle = {setReloadTitle}
           authenticated={authStateAuthenticated}
           authUser={authStateUser}
           handleNotAuthenticated={_handleNotAuthenticated}
+          setTabDisplayed={setTabDisplayed}
+          tabDisplayed={tabDisplayed}
         />
 
-        <TitleBackground />
+        <TitleBackground 
+        />
 
-        <TabStorefront
-          reloadData = {reloadData}
-          setReloadData = {setReloadData}
-          lang = {props.lang}
+        <Title
+          reloadTitle = {reloadTitle}
+          setReloadTitle = {setReloadTitle}
           linkAPI = {linkAPI}
+          lang = {props.lang}
         />
+        
+        {tabDisplayed === "General" && (
+          <TabStorefront
+            reloadData = {reloadData}
+            setReloadData = {setReloadData}
+            lang = {props.lang}
+            linkAPI = {linkAPI}
+            authenticated={authStateAuthenticated}
+            authUser={authStateUser}
+          />
+        )}
+
+        {tabDisplayed === "Items" && (
+          <TabMyItems
+            reloadItems = {reloadItems}
+            setReloadItems = {setReloadItems}
+            lang = {props.lang}
+            linkAPI={linkAPI}
+          />
+        )}
 
         <Footer />
       </div>

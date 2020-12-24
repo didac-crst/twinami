@@ -30,6 +30,7 @@ const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.static(buildPath));
 // app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Connecting to the database
 mongoose.connect(keys.MONGODB_URL, {
@@ -108,7 +109,6 @@ app.get('/image/:imageName', (req,res) =>{
 });
 
 app.get('/content/:page', (req, res) => {
-
   function createPackage(content,lang,route){
     // Deconstracting Object
     const {[lang]: langPack} = content;
@@ -124,16 +124,12 @@ app.get('/content/:page', (req, res) => {
   res.send(contentFiltered);
 });
 
-app.get('/db/:page', (req, res) => {
-  const routeName = req.params.page;
-
+app.get('/db', (req, res) => {
   Article.find(function(err, foundArticles){
     if(!err){
       const dbFiltered = {
-        // "articlesMeta": filterArticlesLang(foundArticles,langName),
         "articlesDB": foundArticles
       }
-
       res.send(dbFiltered);
     } else {
       res.send(err);
@@ -141,19 +137,72 @@ app.get('/db/:page', (req, res) => {
   });
 });
 
-app.get('/bookArticle/:articleID', (req,res) => {
-  const params = req.params.articleID.split(':');
-  const lang = params[0];
-  const artID = params[1];
-  Article.findOne({_id:artID}, function(err,foundArticle){
-    if(foundArticle){
-      res.send(foundArticle);
+// app.get('/bookArticle/:articleID', (req,res) => {
+//   const params = req.params.articleID.split(':');
+//   const lang = params[0];
+//   const artID = params[1];
+//   Article.findOne({_id:artID}, function(err,foundArticle){
+//     if(foundArticle){
+//       res.send(foundArticle);
+//     } else {
+//       res.send("No article found");
+//     }
+//   });
+// });
+
+app.get('/myItems', (req,res) => {
+  const userId = req.user._id;
+  Article.find({userId:userId}, function(err,foundArticles){
+    if(!err){
+      const myItems = {
+        "myItems": foundArticles
+      }
+      res.send(foundArticles);
     } else {
-      res.send("No article found");
+      res.send(err);
     }
   });
 });
 
+// POST --------------------------------------------------------
+
+app.post('/bookArticle', (req,res) => {
+  const articleID = req.body.articleID;
+  const booking = {
+    booked: true,
+    userId: req.user._id
+  };
+  Article.updateOne(
+    {_id: articleID},
+    {$set: booking},
+    function(err){
+      if(!err){
+        console.log("Succesfully updated article");
+      } else {
+        console.log(err);
+      }
+    }
+  );
+});
+
+app.post('/deleteArticle', (req,res) => {
+  const articleID = req.body.articleID;
+  const booking = {
+    booked: false,
+    userId: ""
+  };
+  Article.updateOne(
+    {_id: articleID},
+    {$set: booking},
+    function(err){
+      if(!err){
+        console.log("Succesfully updated article");
+      } else {
+        console.log(err);
+      }
+    }
+  );
+});
 
 // PORT LISTENING ----------------------------------------
 

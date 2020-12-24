@@ -1,12 +1,24 @@
 {
-  "routeHome":{
+  "navbar":{
+    "menu":"Menú",
+    "login": "Conectar-se",
+    "logout": "Desconectar-se",
+    "general": "General",
+    "items": "Els meus articles",
+    "language": "Llengua",
+    "loggedOutTitle": "Desconectat",
+    "loggedOutText": "Conecta't per poder reservar qualsevol articles.",
+    "loggedInTitle": "Conectat",
+    "loggedInTextPre": "Conectat com  ",
+    "loggedInTextPost": ". Llest per reservar qualsevol article en el teu compte."
+  },
 
-    "title":{
-      "navTitle": "Hello Twins!!!",
-      "selectLang": "Llengua",
-      "preDays": "falten ",
-      "postDays": " dies"
-    },
+  "title":{
+    "preDays": "falten ",
+    "postDays": " dies"
+  },
+
+  "overview":{
 
     "introduction":{
       "introTitle": "Tampoc fa falta tornar-nos bojos!",
@@ -70,6 +82,19 @@
       "poolTitle": "Guardiola virtual",
       "poolContent": "Si voleu contribuir però no voleu agafar cap article nou, podeu contribuir en el enllaç següent:",
       "thanksMsg": "Moltes gracies per la vostra contribucio!"
+    }
+  },
+
+  "myItems":{
+    "title": "Aquests són els articles que has reservat:",
+    "empty":"No hi ha cap article reservat.",
+    "tags":{
+      "price":"Preu: ",
+      "quantity":"Quantitat: ",
+      "new": "De preferència nou",
+      "used": "De segona mà",
+      "deleteButton":"Ja no el vull",
+      "closeButton":"Tancar"
     }
   }
 }

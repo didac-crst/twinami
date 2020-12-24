@@ -19,9 +19,9 @@ function Login (props){
     return(
         <>
             {props.authenticated ? (
-                <Dropdown.Item onClick={_handleLogoutClick}>Logout</Dropdown.Item>
+                <Dropdown.Item onClick={_handleLogoutClick}>{props.jsonCont.logout}</Dropdown.Item>
             ) : (
-                <Dropdown.Item onClick={_handleSignInClick}>Login</Dropdown.Item>
+                <Dropdown.Item onClick={_handleSignInClick}>{props.jsonCont.login}</Dropdown.Item>
             )}
         </>
     );
