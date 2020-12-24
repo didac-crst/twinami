@@ -33,7 +33,12 @@ function ArticleCard(props) {
             <Card className="cardDef">
                 <Card.Header onClick={handleShow} className="cardHeaderDef">
                     <Card.Title className="titleArticle pb-2">{text.name}</Card.Title>
-                    <CardImg  classImg="imgArticle" type={contentType} img={image} />
+                    <div className="absoluteHolder">
+                        <CardImg  classImg="imgArticle" type={contentType} img={image} />
+                        {props.jsonArticle.booked && (
+                            <h3 className="itemBooked">Booked</h3>
+                        )}
+                    </div>
                 </Card.Header>
             </Card>
 
@@ -44,62 +49,71 @@ function ArticleCard(props) {
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
             >
-                <Modal.Header closeButton>
-                    <Modal.Title className="titleArticle px-4"><a target="_blank" rel="noopener noreferrer" href={props.jsonArticle.link}>{text.name}</a></Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Container>
-                        <Row  className="px-0">
-                            <Col md={12} lg={5} className="px-4">
-                                <CardImg classImg="imgArticleModal" type={contentType} img={image} />
-                            </Col>
-                            <Col md={12} lg={7} className="px-4">
-                                <Card.Text className="descrArticle textJustified">
-                                    {text.description}
-                                </Card.Text>
-                                <ListGroup className="list-group-flush px-0">
-                                    <ListGroupItem className="listArticle textLeft">{props.tags.price}{props.jsonArticle.price}€</ListGroupItem>
-                                    <ListGroupItem className="listArticle textLeft">{props.tags.quantity}{props.jsonArticle.quantity}</ListGroupItem>
-                                    <ListGroupItem className="listArticle textLeft">{props.jsonArticle.buyNew ? props.tags.new : props.tags.used}</ListGroupItem>
-                                    {comment && (
-                                        <Form>
-                                            <Form.Group controlId="formBasicEmail">
-                                                <Form.Label>Comment</Form.Label>
-                                                <Form.Control type="comment" placeholder="Enter comment" />
-                                                <Form.Text className="text-muted">
-                                                Tell us anything you want to share with us about the item you've chosen.
-                                                </Form.Text>
-                                            </Form.Group>
-                                        </Form>
-                                    )}
-                                </ListGroup>
-                            </Col>
-                        </Row>
-                    </Container>
-                </Modal.Body>
-                <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    {props.tags.closeButton}
-                </Button>
-                {props.authenticated ? (
-                    <ArticleBookBtn
-                        linkAPI = {props.linkAPI}
-                        articleId = {props.jsonArticle._id}
-                        authUser={props.authUser}
-                        buyButton = {props.tags.buyButton}
-                        comment = {comment}
-                        setComment = {setComment}
-                        handleClose = {handleClose}
-                        setLoadDB = {props.setLoadDB}
-                    />
-                ) : (
-                    <Button variant="primary" onClick={handleClose}>
-                        Login
-                    </Button>
-                )}
-            </Modal.Footer>
-        </Modal>
-      </div>
+                <div className={props.jsonArticle.booked ? "modalBooked" : ""}>
+                    <Modal.Header closeButton>
+                        <Modal.Title className="titleArticle px-4">
+                            <a target="_blank" rel="noopener noreferrer" href={props.jsonArticle.link}>{text.name}</a>
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Container>
+                            <Row  className="px-0">
+                                <Col md={12} lg={5} className="px-4">
+                                    <CardImg classImg="imgArticleModal" type={contentType} img={image} />
+                                </Col>
+                                <Col md={12} lg={7} className="px-4">
+                                    <Card.Text className="descrArticle textJustified">
+                                        {text.description}
+                                    </Card.Text>
+                                    <ListGroup className="list-group-flush px-0">
+                                        <ListGroupItem className="listArticle textLeft">{props.tags.price}{props.jsonArticle.price}€</ListGroupItem>
+                                        <ListGroupItem className="listArticle textLeft">{props.tags.quantity}{props.jsonArticle.quantity}</ListGroupItem>
+                                        <ListGroupItem className="listArticle textLeft">{props.jsonArticle.buyNew ? props.tags.new : props.tags.used}</ListGroupItem>
+                                        {comment && (
+                                            <Form>
+                                                <Form.Group controlId="formBasicEmail">
+                                                    <Form.Label>Comment</Form.Label>
+                                                    <Form.Control type="comment" placeholder="Enter comment" />
+                                                    <Form.Text className="text-muted">
+                                                    Tell us anything you want to share with us about the item you've chosen.
+                                                    </Form.Text>
+                                                </Form.Group>
+                                            </Form>
+                                        )}
+                                    </ListGroup>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </Modal.Body>
+                    <Modal.Footer className="absoluteHolder">
+                        {props.jsonArticle.booked && (
+                            <h3 className="itemBookedModal"> Booked </h3>
+                        )}
+                        <Button variant="secondary" onClick={handleClose}>
+                            {props.tags.closeButton}
+                        </Button>
+                        {!(props.jsonArticle.booked) && (
+                            props.authenticated ? (
+                                <ArticleBookBtn
+                                    linkAPI = {props.linkAPI}
+                                    articleId = {props.jsonArticle._id}
+                                    authUser={props.authUser}
+                                    buyButton = {props.tags.buyButton}
+                                    comment = {comment}
+                                    setComment = {setComment}
+                                    handleClose = {handleClose}
+                                    setLoadDB = {props.setLoadDB}
+                                />
+                            ) : (
+                                <Button variant="primary" onClick={handleClose}>
+                                    Login
+                                </Button>
+                            )
+                        )}
+                    </Modal.Footer>
+                </div>
+            </Modal>
+        </div>
       );
   }
 

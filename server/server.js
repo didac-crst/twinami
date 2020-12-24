@@ -177,7 +177,7 @@ app.post('/bookArticle', (req,res) => {
     {$set: booking},
     function(err){
       if(!err){
-        console.log("Succesfully updated article");
+        console.log("Succesfully booked article");
       } else {
         console.log(err);
       }
@@ -196,7 +196,7 @@ app.post('/deleteArticle', (req,res) => {
     {$set: booking},
     function(err){
       if(!err){
-        console.log("Succesfully updated article");
+        console.log("Succesfully unbooked article");
       } else {
         console.log(err);
       }
