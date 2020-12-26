@@ -332,7 +332,7 @@ section {
   position: absolute;
   top: 20%;
   left: 7%;
-  z-index: 1;
+  z-index: 2;
 }
 
 
@@ -366,13 +366,13 @@ section {
   .cardDef{
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 90%;
     border-radius: 20px;
   }
   
   .imgArticle{
     margin-top: 15px;
-    width: 50%;
+    width: 60%;
     border-radius: 15px;
   }
 
