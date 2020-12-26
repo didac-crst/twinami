@@ -28,6 +28,7 @@ const articleSchema = new Schema({
   link: String,
   booked: Boolean,
   userId: String,
+  userComment: String,
   image: {
     data: Buffer,
     contentType: String

@@ -1,10 +1,19 @@
 import React, {useState} from "react";
 import { Card, Button, Container, Row, Col, ListGroup, ListGroupItem, Modal, Form } from 'react-bootstrap';
+import TextField from '@material-ui/core/TextField';
 import ArticleBookBtn from './ArticleBookBtn';
 
 function ArticleCard(props) {
     const lang = props.lang;
     const text = props.jsonArticle[lang];
+
+    //Handle Login
+    const _handleSignInClick = () => {
+        // Authenticate using via passport api in the backend
+        // Open Twitter login page
+        // Upon successful login, a cookie session will be stored in the client
+        window.open(props.linkAPI+"auth/google", "_self");
+      };
 
     // THE DATA FROM THE DATABASE RETURNS AN ARRAY WHICH NEEDS TO BE CONVERTED TO A SINGLE ARRAY
     const image = btoa(
@@ -19,13 +28,20 @@ function ArticleCard(props) {
 
     // Handle Modals
     const [show, setShow] = useState(false);
-    const [comment, setComment] = useState(false);
+    const [commentShow, setCommentShow] = useState(false);
+    const [commentText, setCommentText] = useState("");
     
     const handleClose = () => {
         setShow(false);
-        setComment(false);
+        setCommentShow(false);
     }
     const handleShow = () => setShow(true);
+
+    function handleChangeComment(event){
+        const commentValue = event.target.value
+        setCommentText(commentValue);
+    }
+    
 
 
     return (
@@ -36,7 +52,7 @@ function ArticleCard(props) {
                     <div className="absoluteHolder">
                         <CardImg  classImg="imgArticle" type={contentType} img={image} />
                         {props.jsonArticle.booked && (
-                            <h3 className="itemBooked">Booked</h3>
+                            <h3 className="itemBooked">{props.tags.booked}</h3>
                         )}
                     </div>
                 </Card.Header>
@@ -69,15 +85,17 @@ function ArticleCard(props) {
                                         <ListGroupItem className="listArticle textLeft">{props.tags.price}{props.jsonArticle.price}€</ListGroupItem>
                                         <ListGroupItem className="listArticle textLeft">{props.tags.quantity}{props.jsonArticle.quantity}</ListGroupItem>
                                         <ListGroupItem className="listArticle textLeft">{props.jsonArticle.buyNew ? props.tags.new : props.tags.used}</ListGroupItem>
-                                        {comment && (
-                                            <Form>
-                                                <Form.Group controlId="formBasicEmail">
-                                                    <Form.Label>Comment</Form.Label>
-                                                    <Form.Control type="comment" placeholder="Enter comment" />
-                                                    <Form.Text className="text-muted">
-                                                    Tell us anything you want to share with us about the item you've chosen.
-                                                    </Form.Text>
-                                                </Form.Group>
+                                        {commentShow && (
+                                            <Form className="py-4">
+                                                <TextField
+                                                    id="comment"
+                                                    label={props.tags.commentTitle}
+                                                    helperText={props.tags.commentText}
+                                                    variant="outlined"
+                                                    fullWidth
+                                                    autoComplete="off"
+                                                    onChange={handleChangeComment}
+                                                />
                                             </Form>
                                         )}
                                     </ListGroup>
@@ -87,7 +105,7 @@ function ArticleCard(props) {
                     </Modal.Body>
                     <Modal.Footer className="absoluteHolder">
                         {props.jsonArticle.booked && (
-                            <h3 className="itemBookedModal"> Booked </h3>
+                            <h3 className="itemBookedModal">{props.tags.booked}</h3>
                         )}
                         <Button variant="secondary" onClick={handleClose}>
                             {props.tags.closeButton}
@@ -99,14 +117,16 @@ function ArticleCard(props) {
                                     articleId = {props.jsonArticle._id}
                                     authUser={props.authUser}
                                     buyButton = {props.tags.buyButton}
-                                    comment = {comment}
-                                    setComment = {setComment}
+                                    sendButton = {props.tags.sendButton}
+                                    commentShow = {commentShow}
+                                    setCommentShow = {setCommentShow}
+                                    commentText = {commentText}
                                     handleClose = {handleClose}
                                     setLoadDB = {props.setLoadDB}
                                 />
                             ) : (
-                                <Button variant="primary" onClick={handleClose}>
-                                    Login
+                                <Button variant="primary" onClick={_handleSignInClick}>
+                                    {props.tags.login}
                                 </Button>
                             )
                         )}

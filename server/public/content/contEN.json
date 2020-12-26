@@ -74,7 +74,12 @@
         "new": "Preference for new",
         "used": "Preference second hand",
         "buyButton":"I'll take it!",
-        "closeButton":"Close"
+        "closeButton":"Close",
+        "login":"Login",
+        "sendButton":"Send!",
+        "booked":"Booked up",
+        "commentTitle":"Would you like to tell us something?",
+        "commentText":"To finish the booking, write us a message and click on 'Send'."
       }
     },
 
@@ -94,7 +99,8 @@
       "new": "Preference for new",
       "used": "Preference second hand",
       "deleteButton":"I don't want it anymore",
-      "closeButton":"Close"
+      "closeButton":"Close",
+      "message": "My message: "
     }
   }
 }

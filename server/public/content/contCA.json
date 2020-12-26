@@ -74,7 +74,12 @@
         "new": "De preferència nou",
         "used": "De segona mà",
         "buyButton":"Me'l quedo!",
-        "closeButton":"Tancar"
+        "closeButton":"Tancar",
+        "login":"Conectar-se",
+        "sendButton":"Enviar!",
+        "booked":"Reservat",
+        "commentTitle":"Vols dir-nos algo?",
+        "commentText":"Per acabar de fer la reserva escriu-nos un missatge i clica a 'Enviar'."
       }
     },
 
@@ -94,7 +99,8 @@
       "new": "De preferència nou",
       "used": "De segona mà",
       "deleteButton":"Ja no el vull",
-      "closeButton":"Tancar"
+      "closeButton":"Tancar",
+      "message": "El meu missatge: "
     }
   }
 }

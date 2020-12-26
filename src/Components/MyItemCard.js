@@ -57,6 +57,10 @@ function MyItemCard(props) {
                                     <ListGroupItem className="listArticle textLeft">{props.tags.price}{props.jsonArticle.price}€</ListGroupItem>
                                     <ListGroupItem className="listArticle textLeft">{props.tags.quantity}{props.jsonArticle.quantity}</ListGroupItem>
                                     <ListGroupItem className="listArticle textLeft">{props.jsonArticle.buyNew ? props.tags.new : props.tags.used}</ListGroupItem>
+                                    <ListGroupItem className="px-0">
+                                        <div className="listArticle textLeft px-0">{props.tags.message}</div>
+                                        <div className="textLeft px-2"><em>{props.jsonArticle.userComment}</em></div>
+                                    </ListGroupItem>
                                 </ListGroup>
                             </Col>
                         </Row>

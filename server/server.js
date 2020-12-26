@@ -170,7 +170,8 @@ app.post('/bookArticle', (req,res) => {
   const articleID = req.body.articleID;
   const booking = {
     booked: true,
-    userId: req.user._id
+    userId: req.user._id,
+    userComment: req.body.comment
   };
   Article.updateOne(
     {_id: articleID},
@@ -189,7 +190,8 @@ app.post('/deleteArticle', (req,res) => {
   const articleID = req.body.articleID;
   const booking = {
     booked: false,
-    userId: ""
+    userId: "",
+    userComment: ""
   };
   Article.updateOne(
     {_id: articleID},

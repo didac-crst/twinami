@@ -74,7 +74,12 @@
         "new": "Vorzugsweise neu",
         "used": "Vorzugsweise aus zweiter Hand",
         "buyButton":"Ich nehme es!",
-        "closeButton":"Schließen"
+        "closeButton":"Schließen",
+        "login":"Einloggen",
+        "sendButton":"Schicken!",
+        "booked":"Ausgebucht",
+        "commentTitle":"Willst du uns was sagen?",
+        "commentText":"Um die Buchung zu erledigen, schreib uns eine Nachricht und klick auf 'Schicken'."
       }
     },
 
@@ -94,7 +99,8 @@
       "new": "Vorzugsweise neu",
       "used": "Vorzugsweise aus zweiter Hand",
       "deleteButton":"Das will ich nicht mehr",
-      "closeButton":"Schließen"
+      "closeButton":"Schließen",
+      "message": "Meine Nachricht: "
     }
   }
 }

@@ -74,7 +74,12 @@
         "new": "De préférence neuf",
         "used": "De préférence d'occasion",
         "buyButton": "Je le prends!",
-        "closeButton":"Fermer"
+        "closeButton":"Fermer",
+        "login":"Se connecter",
+        "sendButton":"Envoyer!",
+        "booked":"Reservé",
+        "commentTitle":"Veux-tu nous dire quelque chose?",
+        "commentText":"Pour terminer la réservation, écris-nous un message et clique sur 'Envoyer'."
       }
     },
 
@@ -94,7 +99,8 @@
       "new": "De préférence neuf",
       "used": "De préférence d'occasion",
       "deleteButton":"Je le veux plus",
-      "closeButton":"Fermer"
+      "closeButton":"Fermer",
+      "message": "Mon message: "
     }
   }
 }

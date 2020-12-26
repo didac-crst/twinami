@@ -74,7 +74,12 @@
         "new": "De preferéncia nuevo",
         "used": "De segunda mano",
         "buyButton":"Me lo quedo!",
-        "closeButton":"Cerrar"
+        "closeButton":"Cerrar",
+        "login":"Conectarse",
+        "sendButton":"Enviar!",
+        "booked":"Reservado",
+        "commentTitle":"Quieres decirnos algo?",
+        "commentText":"Para terminar la reserva escribenos un mensaje y clica a 'Enviar'."
       }
     },
 
@@ -94,7 +99,8 @@
       "new": "De preferéncia nuevo",
       "used": "De segunda mano",
       "deleteButton":"Ya no lo quiero",
-      "closeButton":"Cerrar"
+      "closeButton":"Cerrar",
+      "message": "Mi mensaje: "
     }
   }
 }

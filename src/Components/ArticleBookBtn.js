@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 function ArticleBookBtn(props) {
     
     function preBookArticle(){
-        props.setComment(true);
+        props.setCommentShow(true);
     }
 
     function bookArticle(){
@@ -16,7 +16,8 @@ function ArticleBookBtn(props) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                articleID: props.articleId
+                articleID: props.articleId,
+                comment: props.commentText
             })
         });
         props.handleClose();
@@ -25,9 +26,10 @@ function ArticleBookBtn(props) {
 
     return (
         <>
-            {props.comment ? (
-                <Button variant="primary" onClick={bookArticle}>
-                    Send booking!
+            {props.commentShow ? (
+                //<Button variant="primary" onClick={bookArticle}>
+                <Button type="submit" variant="primary" onClick={bookArticle}>
+                    {props.sendButton}
                 </Button>
             ):(
                 <Button variant="primary" onClick={preBookArticle}>
