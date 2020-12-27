@@ -28,6 +28,8 @@ const articleSchema = new Schema({
   link: String,
   booked: Boolean,
   userId: String,
+  userName: String,
+  userEmail: String,
   userComment: String,
   image: {
     data: Buffer,

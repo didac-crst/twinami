@@ -171,6 +171,8 @@ app.post('/bookArticle', (req,res) => {
   const booking = {
     booked: true,
     userId: req.user._id,
+    userName: req.user.name,
+    userEmail: req.user.email,
     userComment: req.body.comment
   };
   Article.updateOne(
@@ -191,6 +193,8 @@ app.post('/deleteArticle', (req,res) => {
   const booking = {
     booked: false,
     userId: "",
+    userName: "",
+    userEmail: "",
     userComment: ""
   };
   Article.updateOne(
