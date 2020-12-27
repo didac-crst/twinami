@@ -6,8 +6,6 @@ import { CardColumns } from 'react-bootstrap';
 function Articles(props) {
     return (
         <section id="items" className="sectionColoured">
-            {/* <h2 className="sectionTitle">{props.jsonCont.title}</h2>
-            <p className="plainText textCentered">{props.jsonCont.subtitle}</p> */}
             <CardColumns>
                 {(props.loadDB && props.loadCont) && props.jsonDB.map((article, index) => (
                     <ArticleCard

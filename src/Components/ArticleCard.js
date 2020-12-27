@@ -46,7 +46,7 @@ function ArticleCard(props) {
 
     return (
         <div>
-            <Card className="cardDef">
+            <Card className={props.jsonArticle.booked ? "cardDef cardDefBooked" : "cardDef"}>
                 <Card.Header onClick={handleShow} className="cardHeaderDef">
                     <Card.Title className="titleArticle pb-2">{text.name}</Card.Title>
                     <div className="absoluteHolder">

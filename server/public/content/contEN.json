@@ -59,8 +59,8 @@
           "content": "As long as we can, we would like to buy second hand material"
         },
         {
-          "title": "Same Same",
-          "content": "We want our twins to avoid fighting for the same item, so better twice the same object."
+          "title": "Multicolor",
+          "content": "Blue, green and neutral color are preferred over pink and glitter..."
         }
       ]
     },
@@ -84,8 +84,8 @@
     },
 
     "paypal":{
-      "poolTitle": "...otherwise, you can also support us.",
-      "poolContent": "If you don't want to buy a specific item, you can also help us to finance it on the following link.",
+      "poolTitle": "Money Pool",
+      "poolContent": "If you want to participate in the purchase of secondhand products, you can use the following link:",
       "thanksMsg": "Thank you very much for your support!"
     }
   },

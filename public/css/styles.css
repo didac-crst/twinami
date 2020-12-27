@@ -272,6 +272,11 @@ section {
   border-radius: 20px;
 }
 
+.cardDefBooked{
+  background-color: #aaa;
+}
+
+
 .cardHeaderDef{
   background-color: transparent;
   text-decoration: none !important;
